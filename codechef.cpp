@@ -43,7 +43,7 @@ int main()
     {
         long long int n, x, y, i, k, co = 0;
         cin >> x >> y;
-
+ // loop
         n = abs(x - y);
         for (i = 1; i <= sqrt(n); i++)
         {
