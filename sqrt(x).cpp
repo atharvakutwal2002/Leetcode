@@ -30,6 +30,21 @@ public:
         }
         return ans;
     }
+    double precisedAns(int n, int precision, int tempSol)
+    {
+        double factor = 1;
+        double ans = tempSol;
+
+        for (int i = 0; i < precision; i++)
+        {
+            factor = factor / 10;
+            for (double j = ans; j * j < n; j = j + factor)
+            {
+                ans = j;
+            }
+        }
+        return ans;
+    }
     int mySqrt(int x)
     {
         if (x == 1)
