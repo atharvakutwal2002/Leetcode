@@ -20,8 +20,7 @@ bool possibleSoln(vector<int> v, int n, int stdCount, int mid)
             {
                 return false;
             }
-            sum = 0;
-            sum += v[i];
+            sum=v[i];
         }
     }
     return true;
@@ -38,7 +37,7 @@ int minBooks(vector<int> v, int n, int stdCount)
 
     int l = sum;
     int mid = (s + l) / 2;
-    int ans = 0;
+    int ans = -1;
     while (s <= l)
     {
         if (possibleSoln(v, n, stdCount, mid))
